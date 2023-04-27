@@ -33,6 +33,7 @@ nav{
   font-family: "Space Mono", monospace;
   width: 100%;
   display: flex;
+  margin-bottom: 2rem;
 }
 
 nav ul{
@@ -69,5 +70,59 @@ nav ul li a:hover{
   margin-top: 0px;
   margin-left: 40px;
   margin-right: 40px;
+}
 
+.warning-text{
+  color: rgb(255, 63, 63);
+}
+#photo-text{
+  display: flex;
+  height: 50%;
+
+}
+
+.gray-color{
+  filter: grayscale(100%) brightness(70%);
+  transition: filter 2s;
+  
+}
+.gray-color:hover{
+  filter: grayscale(0%) brightness(100%);
+  transition: filter .5s;
+}
+#photo-t{
+  position: relative;
+  width: 100%;
+  height: 0;
+  background-image: url("/img/family.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
+}
+
+#photo-t:hover{
+
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.item {
+  margin-bottom: 20px;
+  width: 25%;
+  height: 100%;
+  padding: 0rem 1rem;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
