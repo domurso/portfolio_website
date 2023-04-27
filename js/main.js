@@ -17,8 +17,26 @@ function animateText() {
   }, 50)
 }
 
-window.addEventListener("load", animateText);
-
+function animateTitle() {
+  const title = "Dom Urso";
+  const maxLen = title.length;
+  let len = 0;
+  let dir = 1;
+  setInterval(() => {
+    const newTitle = title.substring(0, len);
+    document.title = newTitle;
+    len += dir;
+    if (len > maxLen) {
+      len = maxLen;
+      dir = -1;
+    } else if (len < 1) {
+      len = 2;
+      dir = 1;
+    }
+  }, 250);
+}
+animateTitle();
+  
 const navLinks = document.querySelectorAll("nav ul li a");
 
 navLinks.forEach(link => {
