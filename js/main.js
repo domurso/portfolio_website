@@ -109,3 +109,29 @@ buttonTwo.addEventListener('click', () => {
     console.log(imageSetSet[setIndex][i])
   }
 });
+
+const overlay = document.getElementById("overlay");
+const overlayImage = overlay.querySelector("img");
+const closeButton = overlay.querySelector("button");
+
+const images = document.getElementsByTagName("img");
+for (let i = 0; i < images.length; i++) {
+  images[i].addEventListener("click", function () {
+    if (overlay.style.display === "none") {
+      overlay.style.display = "block";
+      overlayImage.src = images[i].src;
+    } else {
+      overlay.style.display = "none";
+    }
+  });
+}
+
+closeButton.addEventListener("click", function () {
+  overlay.style.display = "none";
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    overlay.style.display = "none";
+  }
+});
