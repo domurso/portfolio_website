@@ -78,7 +78,7 @@ nav ul li a:hover{
 .warning-text{
   color: rgb(255, 63, 63);
 }
-#photo-text{
+.photo-text{
   display: flex;
   height: 50%;
 
@@ -128,4 +128,40 @@ nav ul li a:hover{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.images-container {
+  display: flex;
+  height: 45vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem .5rem;
+}
+
+.image-item {
+  margin-bottom: 20px;
+  width: 50%;
+  height: 100%;
+  padding: 0rem 1rem;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-buttons{
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid black;;
+  
+}
+.image-buttons p{
+  text-align: center;
+  size: 200%;
+}
+.image-buttons a{
+  color: black;
 }
